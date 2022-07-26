@@ -333,8 +333,7 @@
                                 <div *ngIf="creditCardNumber.invalid && (creditCardNumber.dirty || creditCardNumber.touched)"
                                     class="alert alert-danger mt-1">
                     
-                                    <div *ngIf="creditCardNumber.errors?.['required'] || creditCardNumber.errors?.['notOnlyWhitespace']">
-                                        Card number is required</div>
+                                    <div *ngIf="creditCardNumber.errors?.['required']">Card number is required</div>
                     
                                     <div *ngIf="creditCardNumber.errors?.['pattern']">Card number must be 16 digits long</div>
                     
@@ -352,8 +351,7 @@
                                 <div *ngIf="creditCardSecurityCode.invalid && (creditCardSecurityCode.dirty || creditCardSecurityCode.touched)"
                                     class="alert alert-danger mt-1">
                     
-                                    <div *ngIf="creditCardSecurityCode.errors?.['required'] || creditCardSecurityCode.errors?.['notOnlyWhitespace']">
-                                        Security code is required</div>
+                                    <div *ngIf="creditCardSecurityCode.errors?.['required']">Security code is required</div>
                     
                                     <div *ngIf="creditCardSecurityCode.errors?.['pattern']">Security must be 3 digits long</div>
                     
