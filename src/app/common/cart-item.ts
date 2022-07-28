@@ -4,7 +4,7 @@ export class CartItem {
 
     id: number;
     name: string;
-    imageUrl: String;
+    imageUrl: string;
     unitPrice: number;
     quantity: number;
 
