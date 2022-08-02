@@ -37,17 +37,21 @@ export class CartService {
       // find the item in the cart based on item id
 
       existingCartItem = this.cartItems.find(
-        tempCartItem => tempCartItem.id == theCartItem.id
+        tempCartItem => tempCartItem.id === theCartItem.id
       );
-    }
 
-    // check if we found it
+      // check if we found it
     alreadyExistsInCart = (existingCartItem != undefined);
 
+    }
+
     if (alreadyExistsInCart) {
+
       // increment the quantity
       existingCartItem.quantity++;
+
     } else {
+      
       // just add the item to the array
       this.cartItems.push(theCartItem);
     }
