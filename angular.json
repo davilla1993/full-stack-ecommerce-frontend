@@ -52,6 +52,14 @@
               ],
               "outputHashing": "all"
             },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ]
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -68,6 +76,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-ecommerce:build:production"
+            },
+            "qa": {
+              "browserTarget": "ng-ecommerce:build:qa"
             },
             "development": {
               "browserTarget": "ng-ecommerce:build:development"
