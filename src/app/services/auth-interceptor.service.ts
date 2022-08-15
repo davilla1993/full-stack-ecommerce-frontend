@@ -22,7 +22,7 @@ export class AuthInterceptorService implements HttpInterceptor {
 
     // Only add an access token for secured endpoints
     const theEndpoint = environment.luv2shopApiUrl + '/orders';
-    const securedEndpoints = ['http://localhost:8080/api/orders'];
+    const securedEndpoints = ['https://localhost:8443/api/orders'];
 
     if(securedEndpoints.some(url => request.urlWithParams.includes(url))) {
 
